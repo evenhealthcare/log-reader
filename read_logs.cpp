@@ -32,9 +32,6 @@ void parse_line(
 
   while (std::getline(file, line)) {
     if (current_line == line_number) {
-      if (line.size() < 23)
-        return;
-
       std::string date = line.substr(1, 10);
       std::string level = line.substr(22, line.find(':', 22) - 22);
 
